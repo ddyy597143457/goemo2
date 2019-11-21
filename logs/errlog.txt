@@ -1,0 +1,42 @@
+2019/11/17 02:22:59 strconv.ParseInt: parsing "mate30": invalid syntax
+2019/11/17 02:24:11 strconv.ParseInt: parsing "mate": invalid syntax
+2019/11/17 02:24:40 strconv.ParseInt: parsing "mate30": invalid syntax
+2019/11/17 02:26:27 Error 1062: Duplicate entry '10-huawei' for key 'product_name'
+2019/11/17 02:35:50 sql: expected 0 arguments, got 1
+2019/11/17 02:35:57 sql: expected 0 arguments, got 1
+2019/11/17 02:56:42 Error 1054: Unknown column 'products' in 'field list'
+2019/11/17 03:13:03 Error 1054: Unknown column 'products.product_name1' in 'field list'
+2019/11/17 20:25:22 Error 1054: Unknown column 'product_classifies' in 'field list'
+2019/11/19 01:30:08 Error 1062: Duplicate entry '27-iphone11' for key 'product_name'
+2019/11/19 19:35:00 Error 1103: Incorrect table name ''
+2019/11/19 19:35:37 Error 1103: Incorrect table name ''
+2019/11/20 13:49:31 Error 1146: Table 'emo.roles_models' doesn't exist
+2019/11/20 14:08:50 Error 1103: Incorrect table name ''
+2019/11/21 20:25:12 token缺失
+2019/11/21 20:25:12 用户未登陆
+2019/11/21 20:28:32 token缺失
+2019/11/21 20:28:32 用户未登陆
+2019/11/21 20:31:05 token缺失
+2019/11/21 20:31:05 用户未登陆
+2019/11/21 20:38:56 token缺失
+2019/11/21 20:38:56 用户未登陆
+2019/11/21 20:38:57 token缺失
+2019/11/21 20:38:57 用户未登陆
+2019/11/21 20:39:46 token缺失
+2019/11/21 20:39:46 用户未登陆
+2019/11/21 20:39:46 token缺失
+2019/11/21 20:39:46 用户未登陆
+2019/11/21 20:39:48 token缺失
+2019/11/21 20:39:48 用户未登陆
+2019/11/21 20:39:49 token缺失
+2019/11/21 20:39:49 用户未登陆
+2019/11/21 20:40:51 token缺失
+2019/11/21 20:40:53 token缺失
+2019/11/21 20:42:19 token缺失
+2019/11/22 02:16:58 Key: 'User.Phone' Error:Field validation for 'Phone' failed on the 'required' tag
+Key: 'User.Passwd' Error:Field validation for 'Passwd' failed on the 'required' tag
+2019/11/22 04:00:26 token缺失
+2019/11/22 04:01:01 用户未登陆
+2019/11/22 04:02:56 Error 1062: Duplicate entry '仓库管理员' for key 'role_name'
+2019/11/22 04:25:45 用户未登陆
+2019/11/22 04:25:47 用户未登陆
