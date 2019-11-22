@@ -16,15 +16,6 @@ type User struct {
 	Salt    string `gorm:"size:15"`
 }
 
-type UserLoginInfo struct {
-	ID int `json:"id"`
-	Phone string `json:"phone"`
-	Name string	`json:"name"`
-	RoleId int `json:"role_id"`
-	RoleName string `json:"role_name"`
-}
-
-
 func (u *User) Register() error {
 	var user User
 	db := server.GetDBEngine()
@@ -51,18 +42,8 @@ func (u *User)Login() (string,error) {
 	if db.Error != nil {
 		return "",db.Error
 	}
-	var role Role
-	userid := user.ID
-	db.Table("user_roles").Select("roles.id,roles.role_name").Joins("inner join roles on user_roles.role_id=roles.id").Where("user_roles.user_id=?",userid).Find(&role)
-	userinfo := &UserLoginInfo {
-		ID : userid,
-		Phone : user.Phone,
-		Name : user.Name,
-		RoleId : role.ID,
-		RoleName : role.RoleName,
-	}
 	token := helper.Sha1(user.Phone+user.Salt)
-	userInfobytes ,err := json.Marshal(userinfo)
+	userInfobytes ,err := json.Marshal(user)
 	if err != nil {
 		return "",err
 	}

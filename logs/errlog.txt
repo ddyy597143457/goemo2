@@ -40,3 +40,7 @@ Key: 'User.Passwd' Error:Field validation for 'Passwd' failed on the 'required' 
 2019/11/22 04:02:56 Error 1062: Duplicate entry '仓库管理员' for key 'role_name'
 2019/11/22 04:25:45 用户未登陆
 2019/11/22 04:25:47 用户未登陆
+2019/11/22 04:56:12 Error 1062: Duplicate entry '仓库管理员1' for key 'role_name'
+2019/11/22 04:56:14 Error 1062: Duplicate entry '仓库管理员1' for key 'role_name'
+2019/11/22 04:56:31 Error 1062: Duplicate entry '仓库管理员1' for key 'role_name'
+2019/11/22 04:57:04 Error 1062: Duplicate entry '仓库管理员1' for key 'role_name'

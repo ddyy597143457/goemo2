@@ -31,3 +31,13 @@ func (Role)DelRole(roleid int) error {
 	}
 	return nil
 }
+
+func GetRoleByUserId(userid int) (*Role,error) {
+	var role Role
+	db := server.GetDBEngine()
+	db.Table("user_roles").Select("roles.*").Joins("inner join roles on user_roles.role_id=roles.id").Where("user_roles.user_id=?",userid).Find(&role)
+	if db.Error != nil {
+		return nil,db.Error
+	}
+	return &role,nil
+}

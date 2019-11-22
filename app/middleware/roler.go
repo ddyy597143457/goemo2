@@ -21,14 +21,20 @@ func Roler() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
-		var userinfo model.UserLoginInfo
+		var userinfo model.User
 		err = json.Unmarshal([]byte(v),&userinfo)
 		if err != nil {
-			ginres.ResError(app.DATABASE_ERROR,errors.New("loginuserinfo解析异常"))
+			ginres.ResError(app.DATABASE_ERROR,errors.New("解析User异常"))
 			c.Abort()
 			return
 		}
-		if userinfo.RoleId != app.SYSTEM_MANAGER {
+		role,err := model.GetRoleByUserId(userinfo.ID)
+		if err != nil {
+			ginres.ResError(app.DATABASE_ERROR,err)
+			c.Abort()
+			return
+		}
+		if role.ID != app.SYSTEM_MANAGER {
 			ginres.ResError(app.AUTH_ERROR,nil)
 			c.Abort()
 			return

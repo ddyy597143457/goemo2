@@ -1,7 +1,6 @@
 package model
 
 import (
-	"fmt"
 	"ddyy/goemo2/helper"
 	"ddyy/goemo2/server"
 	"time"
@@ -26,7 +25,6 @@ func (ProductClassify) GetProductClassifyList() (interface{},error){
 		productList,_ := product.GetProductList(0)
 		for id,v := range pcms {
 			for _,v1 := range productList {
-				fmt.Println(v1.ClassifyId,v.ID)
 				if v1.ClassifyId == v.ID {
 					pcms[id].Item = append(pcms[id].Item,v1)
 				}
